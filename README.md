@@ -1,0 +1,1 @@
+# TechStock - Gestor de Estoque

@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "nome": "Processador Intel Core i7-11700K",
+    "quantidade_em_estoque": 15,
+    "categoria": "Processadores",
+    "data_de_inclusao": "2024-02-22",
+    "preco": 2199.99,
+    "img": "https://www.example.com/processador_i7-11700k.jpg",
+    "descricao": "Processador de alta performance da Intel, ideal para jogos e tarefas exigentes. Possui 8 núcleos e 16 threads."
+  },
+  {
+    "id": 2,
+    "nome": "Placa de Vídeo NVIDIA GeForce RTX 3080",
+    "quantidade_em_estoque": 10,
+    "categoria": "Placas de Vídeo",
+    "data_de_inclusao": "2024-02-24",
+    "preco": 5699.90,
+    "img": "https://www.example.com/placa_video_rtx3080.jpg",
+    "descricao": "Placa de vídeo de última geração da NVIDIA, oferece desempenho excepcional para jogos em 4K e realidade virtual."
+  },
+  {
+    "id": 3,
+    "nome": "Memória RAM Corsair Vengeance LPX 16GB",
+    "quantidade_em_estoque": 18,
+    "categoria": "Memórias RAM",
+    "data_de_inclusao": "2024-03-02",
+    "preco": 479.99,
+    "img": "https://www.example.com/memoria_ram_vengeance_lpx16gb.jpg",
+    "descricao": "Memória RAM de alta velocidade da Corsair, projetada para oferecer excelente desempenho em sistemas de jogos e multitarefa."
+  },
+  {
+    "id": 4,
+    "nome": "Monitor Gamer ASUS TUF VG27AQ",
+    "quantidade_em_estoque": 12,
+    "categoria": "Monitores",
+    "data_de_inclusao": "2024-02-26",
+    "preco": 3299.90,
+    "img": "https://www.example.com/monitor_asus_vg27aq.jpg",
+    "descricao": "Monitor gamer de alta qualidade da ASUS, com taxa de atualização de 165Hz e tecnologia HDR para uma experiência de jogo imersiva."
+  },
+  {
+    "id": 5,
+    "nome": "Teclado Mecânico HyperX Alloy Elite 2",
+    "quantidade_em_estoque": 7,
+    "categoria": "Periféricos",
+    "data_de_inclusao": "2024-03-10",
+    "preco": 899.99,
+    "img": "https://www.example.com/teclado_hyperx_alloy_elite2.jpg",
+    "descricao": "Teclado mecânico premium da HyperX, com iluminação RGB personalizável e switches mecânicos duráveis."
+  },
+  {
+    "id": 6,
+    "nome": "SSD Kingston A2000 NVMe PCIe M.2 1TB",
+    "quantidade_em_estoque": 20,
+    "categoria": "Armazenamento",
+    "data_de_inclusao": "2024-02-20",
+    "preco": 749.90,
+    "img": "https://www.example.com/ssd_kingston_a2000_1tb.jpg",
+    "descricao": "SSD de alta velocidade da Kingston, oferece tempos de carregamento rápidos e excelente desempenho para sistemas de jogos e produção de mídia."
+  },
+  {
+    "id": 7,
+    "nome": "Placa-Mãe ASUS ROG Strix Z590-E Gaming",
+    "quantidade_em_estoque": 8,
+    "categoria": "Placas-Mãe",
+    "data_de_inclusao": "2024-03-05",
+    "preco": 2999.90,
+    "img": "https://www.example.com/placa_mae_asus_z590-e.jpg",
+    "descricao": "Placa-mãe de alta performance da ASUS, equipada com recursos avançados para suportar CPUs de última geração e oferecer uma experiência de jogo imersiva."
+  },
+  {
+    "id": 8,
+    "nome": "Gabinete NZXT H510",
+    "quantidade_em_estoque": 13,
+    "categoria": "Gabinetes",
+    "data_de_inclusao": "2024-02-28",
+    "preco": 699.90,
+    "img": "https://www.example.com/gabinete_nzxt_h510.jpg",
+    "descricao": "Gabinete elegante da NZXT, projetado para oferecer excelente fluxo de ar e fácil gerenciamento de cabos para construções de PC limpas e eficientes."
+  },
+  {
+    "id": 9,
+    "nome": "Headset Gamer Logitech G Pro X",
+    "quantidade_em_estoque": 9,
+    "categoria": "Acessórios",
+    "data_de_inclusao": "2024-03-08",
+    "preco": 649.90,
+    "img": "https://www.example.com/headset_logitech_gprox.jpg",
+    "descricao": "Headset gamer de alta qualidade da Logitech, com drivers avançados e design confortável para longas sessões de jogo."
+  },
+  {
+    "id": 10,
+    "nome": "Mouse Gamer Razer DeathAdder V2",
+    "quantidade_em_estoque": 6,
+    "categoria": "Periféricos",
+    "data_de_inclusao": "2024-03-01",
+    "preco": 399.99,
+    "img": "https://www.example.com/mouse_razer_deathadder_v2.jpg",
+    "descricao": "Mouse gamer de alto desempenho da Razer, com sensor óptico avançado e design ergonômico para precisão e conforto durante o jogo."
+  },
+  {
+    "id": 11,
+    "nome": "Roteador Wi-Fi 6 TP-Link Archer AX50",
+    "quantidade_em_estoque": 17,
+    "categoria": "Rede",
+    "data_de_inclusao": "2024-02-21",
+    "preco": 799.90,
+    "img": "https://www.example.com/roteador_tplink_archer_ax50.jpg",
+    "descricao": "Roteador Wi-Fi de última geração da TP-Link, oferece velocidades ultrarrápidas e ampla cobertura para uma rede doméstica estável e confiável."
+  },
+  {
+    "id": 12,
+    "nome": "Cooler para Processador Cooler Master Hyper 212 RGB Black Edition",
+    "quantidade_em_estoque": 14,
+    "categoria": "Coolers",
+    "data_de_inclusao": "2024-03-06",
+    "preco": 279.90,
+    "img": "https://www.example.com/cooler_coolermaster_hyper212rgb.jpg",
+    "descricao": "Cooler de CPU eficiente da Cooler Master, com design elegante e iluminação RGB personalizável para manter o seu processador refrigerado com estilo."
+  },
+  {
+    "id": 13,
+    "nome": "Cadeira Gamer DXRacer Racing Series",
+    "quantidade_em_estoque": 11,
+    "categoria": "Móveis",
+    "data_de_inclusao": "2024-03-03",
+    "preco": 1999.99,
+    "img": "https://www.example.com/cadeira_dxracer_racingseries.jpg",
+    "descricao": "Cadeira gamer ergonômica da DXRacer, oferece conforto e suporte durante longas sessões de jogo, com design esportivo e ajustes personalizáveis."
+  },
+  {
+    "id": 14,
+    "nome": "Hub USB 3.0 Anker 7 Portas",
+    "quantidade_em_estoque": 19,
+    "categoria": "Acessórios",
+    "data_de_inclusao": "2024-02-25",
+    "preco": 149.90,
+    "img": "https://www.example.com/hub_usb_anker_7portas.jpg",
+    "descricao": "Hub USB de alta qualidade da Anker, oferece conectividade adicional e transferência de dados rápida para dispositivos USB."
+  },
+  {
+    "id": 15,
+    "nome": "Impressora Multifuncional Brother DCP-L2540DW",
+    "quantidade_em_estoque": 16,
+    "categoria": "Periféricos",
+    "data_de_inclusao": "2024-03-09",
+    "preco": 899.90,
+    "img": "https://www.example.com/impressora_brother_dcpl2540dw.jpg",
+    "descricao": "Impressora multifuncional compacta da Brother, oferece impressão rápida e de alta qualidade, além de digitalização e cópia convenientes."
+  },
+  {
+    "id": 16,
+    "nome": "Mousepad Gamer SteelSeries QcK+",
+    "quantidade_em_estoque": 20,
+    "categoria": "Periféricos",
+    "data_de_inclusao": "2024-02-23",
+    "preco": 129.90,
+    "img": "https://www.example.com/mousepad_steelseries_qckplus.jpg",
+    "descricao": "Mousepad de alta qualidade da SteelSeries, oferece superfície lisa e antiderrapante para precisão e conforto durante o uso do mouse."
+  },
+  {
+    "id": 17,
+    "nome": "Caixa de Som Gamer Logitech G560",
+    "quantidade_em_estoque": 5,
+    "categoria": "Áudio",
+    "data_de_inclusao": "2024-02-27",
+    "preco": 1699.90,
+    "img": "https://www.example.com/caixa_som_logitech_g560.jpg",
+    "descricao": "Caixa de som com iluminação RGB da Logitech, oferece áudio imersivo e personalizável para uma experiência de jogo envolvente."
+  },
+  {
+    "id": 18,
+    "nome": "Webcam Logitech C920 HD Pro",
+    "quantidade_em_estoque": 12,
+    "categoria": "Periféricos",
+    "data_de_inclusao": "2024-03-04",
+    "preco": 499.90,
+    "img": "https://www.example.com/webcam_logitech_c920hdpro.jpg",
+    "descricao": "Webcam de alta definição da Logitech, oferece vídeo nítido e claro para videochamadas e streaming."
+  },
+  {
+    "id": 19,
+    "nome": "Mochila Gamer Razer Rogue V3",
+    "quantidade_em_estoque": 8,
+    "categoria": "Acessórios",
+    "data_de_inclusao": "2024-02-29",
+    "preco": 299.90,
+    "img": "https://www.example.com/mochila_razer_roguev3.jpg",
+    "descricao": "Mochila gamer resistente da Razer, oferece espaço amplo e compartimentos acolchoados para transportar com segurança seu laptop e acessórios."
+  },
+  {
+    "id": 20,
+    "nome": "Adaptador Wi-Fi USB TP-Link Archer T3U Plus",
+    "quantidade_em_estoque": 15,
+    "categoria": "Rede",
+    "data_de_inclusao": "2024-03-07",
+    "preco": 99.90,
+    "img": "https://www.example.com/adaptador_wifi_tplink_archer_t3uplus.jpg",
+    "descricao": "Adaptador Wi-Fi de alta velocidade da TP-Link, oferece conexão rápida e estável para dispositivos sem fio em redes domésticas."
+  },
+  {
+    "id": 21,
+    "nome": "Processador AMD Ryzen 9 5900X",
+    "quantidade_em_estoque": 11,
+    "categoria": "Processadores",
+    "data_de_inclusao": "2024-02-21",
+    "preco": 2999.90,
+    "img": "https://www.example.com/processador_amd_ryzen95900x.jpg",
+    "descricao": "Processador de última geração da AMD, oferece desempenho excepcional para multitarefa e jogos intensivos."
+  },
+  {
+    "id": 22,
+    "nome": "Placa de Vídeo AMD Radeon RX 6900 XT",
+    "quantidade_em_estoque": 9,
+    "categoria": "Placas de Vídeo",
+    "data_de_inclusao": "2024-03-08",
+    "preco": 6999.90,
+    "img": "https://www.example.com/placa_video_amd_radeonrx6900xt.jpg",
+    "descricao": "Placa de vídeo de alta performance da AMD, oferece gráficos incríveis para jogos em resolução 4K e realidade virtual."
+  },
+  {
+    "id": 23,
+    "nome": "Memória RAM G.Skill Trident Z RGB 32GB",
+    "quantidade_em_estoque": 14,
+    "categoria": "Memórias RAM",
+    "data_de_inclusao": "2024-02-28",
+    "preco": 999.90,
+    "img": "https://www.example.com/memoria_ram_gskill_tridentz32gb.jpg",
+    "descricao": "Memória RAM de alta capacidade e estilo da G.Skill, oferece desempenho confiável e iluminação RGB personalizável para sistemas de jogos."
+  },
+  {
+    "id": 24,
+    "nome": "Monitor Gamer LG UltraGear 27GN950-B",
+    "quantidade_em_estoque": 8,
+    "categoria": "Monitores",
+    "data_de_inclusao": "2024-03-02",
+    "preco": 5499.90,
+    "img": "https://www.example.com/monitor_lg_ultragear_27gn950b.jpg",
+    "descricao": "Monitor gamer de alta resolução da LG, oferece imagens nítidas e cores vibrantes para uma experiência de jogo imersiva."
+  },
+  {
+    "id": 25,
+    "nome": "Teclado Mecânico Razer BlackWidow V3",
+    "quantidade_em_estoque": 12,
+    "categoria": "Periféricos",
+    "data_de_inclusao": "2024-02-24",
+    "preco": 799.90,
+    "img": "https://www.example.com/teclado_razer_blackwidowv3.jpg",
+    "descricao": "Teclado mecânico premium da Razer, oferece resposta tátil e iluminação RGB personalizável para uma experiência de digitação superior."
+  },
+  {
+    "id": 26,
+    "nome": "SSD Crucial MX500 2TB",
+    "quantidade_em_estoque": 17,
+    "categoria": "Armazenamento",
+    "data_de_inclusao": "2024-03-06",
+    "preco": 1499.90,
+    "img": "https://www.example.com/ssd_crucial_mx500_2tb.jpg",
+    "descricao": "SSD de alta capacidade da Crucial, oferece armazenamento rápido e confiável para seus arquivos e aplicativos."
+  },
+  {
+    "id": 27,
+    "nome": "Placa-Mãe MSI MAG B550 Tomahawk",
+    "quantidade_em_estoque": 13,
+    "categoria": "Placas-Mãe",
+    "data_de_inclusao": "2024-02-23",
+    "preco": 1199.90,
+    "img": "https://www.example.com/placa_mae_msi_magb550tomahawk.jpg",
+    "descricao": "Placa-mãe de alta qualidade da MSI, oferece suporte robusto para hardware de última geração e recursos avançados de overclocking."
+  },
+  {
+    "id": 28,
+    "nome": "Gabinete Cooler Master MasterBox MB511 ARGB",
+    "quantidade_em_estoque": 15,
+    "categoria": "Gabinetes",
+    "data_de_inclusao": "2024-03-09",
+    "preco": 699.90,
+    "img": "https://www.example.com/gabinete_coolermaster_mb511argb.jpg",
+    "descricao": "Gabinete espaçoso da Cooler Master, com iluminação ARGB personalizável e excelente fluxo de ar para manter seus componentes resfriados durante o jogo."
+  },
+  {
+    "id": 29,
+    "nome": "Fone de Ouvido HyperX Cloud Alpha",
+    "quantidade_em_estoque": 10,
+    "categoria": "Acessórios",
+    "data_de_inclusao": "2024-02-22",
+    "preco": 549.90,
+    "img": "https://www.example.com/fone_hyperx_cloudalpha.jpg",
+    "descricao": "Fone de ouvido com som surround da HyperX, oferece áudio nítido e conforto duradouro para sessões de jogo prolongadas."
+  },
+  {
+    "id": 30,
+    "nome": "Mouse Gamer Logitech G502 HERO",
+    "quantidade_em_estoque": 20,
+    "categoria": "Periféricos",
+    "data_de_inclusao": "2024-03-04",
+    "preco": 399.90,
+    "img": "https://www.example.com/mouse_logitech_g502hero.jpg",
+    "descricao": "Mouse gamer avançado da Logitech, com sensor de alta precisão e peso ajustável para uma experiência de jogo personalizada."
+  }
+]
