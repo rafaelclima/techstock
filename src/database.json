@@ -298,5 +298,56 @@
     "preco": 399.90,
     "img": "https://www.example.com/mouse_logitech_g502hero.jpg",
     "descricao": "Mouse gamer avançado da Logitech, com sensor de alta precisão e peso ajustável para uma experiência de jogo personalizada."
+  },
+  {
+    "id": 31,
+    "nome": "Samsung Galaxy S22 Ultra",
+    "quantidade_em_estoque": 20,
+    "categoria": "Smartphones",
+    "data_de_inclusao": "2024-03-10",
+    "preco": 3999.99,
+    "img": "https://www.example.com/samsung_galaxy_s22_ultra.jpg",
+    "descricao": "O Samsung Galaxy S22 Ultra é um dos smartphones mais avançados do mercado, oferecendo uma câmera poderosa, tela AMOLED de alta resolução e desempenho excepcional."
+  },
+  {
+    "id": 32,
+    "nome": "iPhone 14 Pro Max",
+    "quantidade_em_estoque": 15,
+    "categoria": "Smartphones",
+    "data_de_inclusao": "2024-03-12",
+    "preco": 4999.90,
+    "img": "https://www.example.com/iphone_14_pro_max.jpg",
+    "descricao": "O iPhone 14 Pro Max é o mais recente lançamento da Apple, oferecendo desempenho superior, câmeras aprimoradas e uma tela OLED impressionante."
+  },
+  {
+    "id": 33,
+    "nome": "Google Pixel 7",
+    "quantidade_em_estoque": 18,
+    "categoria": "Smartphones",
+    "data_de_inclusao": "2024-03-15",
+    "preco": 2999.99,
+    "img": "https://www.example.com/google_pixel_7.jpg",
+    "descricao": "O Google Pixel 7 é conhecido por sua excelente qualidade de câmera, software limpo e atualizações rápidas do Android. Oferece um desempenho suave e uma ótima experiência do usuário."
+  },
+  {
+    "id": 34,
+    "nome": "Xiaomi Redmi Note 11 Pro",
+    "quantidade_em_estoque": 25,
+    "categoria": "Smartphones",
+    "data_de_inclusao": "2024-03-18",
+    "preco": 1499.90,
+    "img": "https://www.example.com/xiaomi_redmi_note_11_pro.jpg",
+    "descricao": "O Xiaomi Redmi Note 11 Pro oferece um excelente custo-benefício, com uma tela de alta qualidade, bateria de longa duração e desempenho sólido."
+  },
+  {
+    "id": 35,
+    "nome": "OnePlus 10 Pro",
+    "quantidade_em_estoque": 12,
+    "categoria": "Smartphones",
+    "data_de_inclusao": "2024-03-20",
+    "preco": 2799.90,
+    "img": "https://www.example.com/oneplus_10_pro.jpg",
+    "descricao": "O OnePlus 10 Pro oferece uma experiência premium, com um design elegante, desempenho rápido e uma tela fluida de alta taxa de atualização."
   }
+
 ]

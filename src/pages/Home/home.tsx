@@ -39,26 +39,17 @@ function Home() {
       (produto) => produto.quantidade_em_estoque < 10
     );
 
-    const category = produtos.reduce(
-      (contador: CategoriaContador, categoria: Produtos) => {
-        if (!contador[categoria.categoria]) {
-          contador[categoria.categoria] = 1;
-        } else {
-          contador[categoria.categoria]++;
-        }
-
-        return contador;
-      },
-      {}
-    );
-
     let qtdItens = 0;
-    for (const key in category) {
-      if (Object.prototype.hasOwnProperty.call(category, key)) {
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    produtos.reduce((contador: CategoriaContador, categoria: Produtos) => {
+      if (!contador[categoria.categoria]) {
+        contador[categoria.categoria] = 1;
         qtdItens++;
+      } else {
+        contador[categoria.categoria]++;
       }
-    }
+
+      return contador;
+    }, {});
 
     setDiversidadeEstoque(qtdItens);
     setItensRecentes(produtosRecentes);
@@ -103,19 +94,19 @@ function Home() {
         <div className="flex flex-col ml-8">
           <div className="-m-1.5 overflow-x-auto">
             <div className="p-1.5 min-w-full inline-block align-middle">
-              <div className="overflow-hidden">
+              <div className="calc-altura-home overflow-y-auto">
                 <table className="min-w-full">
                   <thead>
                     <tr>
                       <th
                         scope="col"
-                        className="px-6 py-4 text-start text-xs font-medium bg-zinc-800 uppercase"
+                        className=" top-0 sticky px-6 py-4 text-start text-xs font-medium bg-zinc-800 uppercase"
                       >
                         Adicionados Recentemente
                       </th>
                       <th
                         scope="col"
-                        className="px-6 py-4 text-xs font-medium bg-zinc-800 uppercase"
+                        className=" top-0 sticky px-6 py-4 text-xs font-medium bg-zinc-800 uppercase"
                       >
                         Ações
                       </th>
@@ -151,25 +142,25 @@ function Home() {
         <div className="flex flex-col mr-8">
           <div className="-m-1.5 overflow-x-auto">
             <div className="p-1.5 min-w-full inline-block align-middle">
-              <div className="overflow-hidden">
+              <div className="calc-altura-home overflow-y-auto">
                 <table className="min-w-full">
                   <thead>
                     <tr>
                       <th
                         scope="col"
-                        className="px-6 py-4 text-start text-xs font-medium bg-zinc-800 uppercase"
+                        className=" top-0 sticky px-6 py-4 text-start text-xs font-medium bg-zinc-800 uppercase"
                       >
                         Estoque Baixo
                       </th>
                       <th
                         scope="col"
-                        className="px-6 py-4 text-center text-xs font-medium bg-zinc-800 uppercase"
+                        className=" top-0 sticky px-6 py-4 text-center text-xs font-medium bg-zinc-800 uppercase"
                       >
                         Qtd.
                       </th>
                       <th
                         scope="col"
-                        className="px-6 py-4 text-xs font-medium bg-zinc-800 uppercase"
+                        className=" top-0 sticky px-6 py-4 text-xs font-medium bg-zinc-800 uppercase"
                       >
                         Ações
                       </th>

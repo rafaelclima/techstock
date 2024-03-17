@@ -9,8 +9,11 @@
   padding: 0;
 }
 
-.calc-altura {
+.calc-altura-produtos {
   max-height: calc(100vh - 243px);
+}
+.calc-altura-home {
+  max-height: calc(100vh - 404px);
 }
 
 :root {

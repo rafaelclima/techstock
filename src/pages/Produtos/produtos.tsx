@@ -36,7 +36,7 @@ export default function Produtos() {
         <div className="flex flex-col">
           <div className="-m-1.5 overflow-x-auto">
             <div className="p-1.5 min-w-full inline-block align-middle">
-              <div className=" calc-altura overflow-y-scroll ">
+              <div className=" calc-altura-produtos overflow-y-auto ">
                 <table className="min-w-full">
                   <thead>
                     <tr>
