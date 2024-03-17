@@ -32,7 +32,7 @@ function Home() {
         dataAtual.getTime() - dataCadastro.getTime();
       const diferencaDias = diferencaMilissegundos / (24 * 60 * 60 * 1000);
 
-      return diferencaDias <= 10;
+      return diferencaDias < 10;
     });
 
     const fimDeEstoque = produtos.filter(
