@@ -19,7 +19,7 @@ export default function Produtos() {
           }`}
           onClick={handleButtonClick}
         >
-          Todos os produtos
+          <Link to="/produtos">Todos os produtos</Link>
         </button>
         <button
           className={`hover:text-purple-500 focus:outline-none ${
@@ -27,7 +27,7 @@ export default function Produtos() {
           }`}
           onClick={handleButtonClick}
         >
-          Novo produto
+          <Link to="/produtos/cadastro">Novo produto</Link>
         </button>
         <hr className="mt-3 border-zinc-500" />
       </div>
@@ -95,13 +95,15 @@ export default function Produtos() {
                             type="button"
                             className="bg-transparent hover:bg-purple-500 text-purple-700 font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded"
                           >
-                            <Link to="/produtos/01">Ver</Link>
+                            <Link to={`/produtos/${produto.id}`}>Ver</Link>
                           </button>
                           <button
                             type="button"
                             className="bg-transparent hover:bg-purple-500 text-purple-700 font-semibold hover:text-white py-2 px-4 mx-3 border border-purple-500 hover:border-transparent rounded"
                           >
-                            Atualizar
+                            <Link to={`/produtos/atualizar/${produto.id}`}>
+                              Atualizar
+                            </Link>
                           </button>
                           <button
                             type="button"

@@ -4,6 +4,8 @@ import RootLayout from "./components/RootLayout";
 import Home from "./pages/Home/home";
 import Produtos from "./pages/Produtos/produtos";
 import Detalhes from "./pages/Detalhes/detalhes";
+import Atualizar from "./pages/AtualizarProduto/atualizar";
+import Cadastrar from "./pages/CadastrarProduto/cadastro";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
       {
         path: "/produtos/:id",
         element: <Detalhes />,
+      },
+      {
+        path: "/produtos/cadastro",
+        element: <Cadastrar />,
+      },
+      {
+        path: "/produtos/atualizar/:id",
+        element: <Atualizar />,
       },
       {
         path: "*",

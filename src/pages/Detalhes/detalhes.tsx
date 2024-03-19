@@ -30,11 +30,6 @@ export default function Detalhes() {
 
   return (
     <div className=" w-full m-auto ">
-      {produto.map((item) => (
-        <h2 key={item.id} className=" text-3xl mb-8 mx-8 ">
-          {item.nome}
-        </h2>
-      ))}
       <div className="mx-8 mb-8">
         <button
           className={`mr-8 hover:text-purple-500 focus:outline-none ${
@@ -56,6 +51,11 @@ export default function Detalhes() {
       </div>
 
       <main className="mx-8">
+        {produto.map((item) => (
+          <h2 key={item.id} className=" font-bold text-3xl mb-6 ">
+            {item.nome}
+          </h2>
+        ))}
         {produto &&
           produto.map((item) => (
             <div key={item.id}>
