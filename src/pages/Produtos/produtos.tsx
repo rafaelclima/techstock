@@ -1,9 +1,23 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import produtos from "../../database.json";
+
+interface Produto {
+  id: number;
+  nome: string;
+  quantidade_em_estoque: number;
+  categoria: string;
+  data_de_inclusao: string;
+  data_de_atualizacao?: string;
+  preco: number;
+  img: string;
+  descricao: string;
+}
 
 export default function Produtos() {
   const [isAllProductsActive, setAllProductsActive] = useState(true);
+
+  const produtosSalvos: string = localStorage.getItem("produtos") ?? "";
+  const produtosJson: Produto[] = JSON.parse(produtosSalvos);
 
   const handleButtonClick = () => {
     setAllProductsActive(!isAllProductsActive);
@@ -19,7 +33,9 @@ export default function Produtos() {
           }`}
           onClick={handleButtonClick}
         >
-          <Link to="/produtos">Todos os produtos</Link>
+          <Link className=" py-2 " to="/produtos">
+            Todos os produtos
+          </Link>
         </button>
         <button
           className={`hover:text-purple-500 focus:outline-none ${
@@ -27,7 +43,9 @@ export default function Produtos() {
           }`}
           onClick={handleButtonClick}
         >
-          <Link to="/produtos/cadastro">Novo produto</Link>
+          <Link className=" py-2 " to="/produtos/cadastro">
+            Novo produto
+          </Link>
         </button>
         <hr className="mt-3 border-zinc-500" />
       </div>
@@ -73,7 +91,7 @@ export default function Produtos() {
                     </tr>
                   </thead>
                   <tbody>
-                    {produtos.map((produto) => (
+                    {produtosJson.map((produto) => (
                       <tr
                         key={produto.id}
                         className="hover:bg-gray-100 dark:hover:bg-zinc-900"
@@ -95,13 +113,21 @@ export default function Produtos() {
                             type="button"
                             className="bg-transparent hover:bg-purple-500 text-purple-700 font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded"
                           >
-                            <Link to={`/produtos/${produto.id}`}>Ver</Link>
+                            <Link
+                              className=" py-2 "
+                              to={`/produtos/${produto.id}`}
+                            >
+                              Ver
+                            </Link>
                           </button>
                           <button
                             type="button"
                             className="bg-transparent hover:bg-purple-500 text-purple-700 font-semibold hover:text-white py-2 px-4 mx-3 border border-purple-500 hover:border-transparent rounded"
                           >
-                            <Link to={`/produtos/atualizar/${produto.id}`}>
+                            <Link
+                              className=" py-2 "
+                              to={`/produtos/atualizar/${produto.id}`}
+                            >
                               Atualizar
                             </Link>
                           </button>

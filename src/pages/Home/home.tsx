@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import produtos from "../../database.json";
 import { Link } from "react-router-dom";
-//import moment from "moment";
 
 interface Produtos {
   id: number;
@@ -24,36 +23,49 @@ function Home() {
   const [diversidadeEstoque, setDiversidadeEstoque] = useState(0);
 
   useEffect(() => {
-    const dataAtual = new Date();
+    const produtosSalvos = localStorage.getItem("produtos");
 
-    const produtosRecentes = produtos.filter((produto) => {
-      const dataCadastro = new Date(produto.data_de_inclusao);
-      const diferencaMilissegundos =
-        dataAtual.getTime() - dataCadastro.getTime();
-      const diferencaDias = diferencaMilissegundos / (24 * 60 * 60 * 1000);
+    if (produtosSalvos !== null) {
+      const produtosJson = JSON.parse(produtosSalvos);
+      const dataAtual = new Date();
 
-      return diferencaDias < 10;
-    });
+      const produtosRecentes = produtosJson.filter(
+        (produto: { data_de_inclusao: string | number | Date }) => {
+          const dataCadastro = new Date(produto.data_de_inclusao);
+          const diferencaMilissegundos =
+            dataAtual.getTime() - dataCadastro.getTime();
+          const diferencaDias = diferencaMilissegundos / (24 * 60 * 60 * 1000);
 
-    const fimDeEstoque = produtos.filter(
-      (produto) => produto.quantidade_em_estoque < 10
-    );
+          return diferencaDias < 10;
+        }
+      );
 
-    let qtdItens = 0;
-    produtos.reduce((contador: CategoriaContador, categoria: Produtos) => {
-      if (!contador[categoria.categoria]) {
-        contador[categoria.categoria] = 1;
-        qtdItens++;
-      } else {
-        contador[categoria.categoria]++;
-      }
+      const fimDeEstoque = produtosJson.filter(
+        (produto: { quantidade_em_estoque: number }) =>
+          produto.quantidade_em_estoque < 10
+      );
 
-      return contador;
-    }, {});
+      let qtdItens = 0;
+      produtosJson.reduce(
+        (contador: CategoriaContador, categoria: Produtos) => {
+          if (!contador[categoria.categoria]) {
+            contador[categoria.categoria] = 1;
+            qtdItens++;
+          } else {
+            contador[categoria.categoria]++;
+          }
 
-    setDiversidadeEstoque(qtdItens);
-    setItensRecentes(produtosRecentes);
-    setFimDeEstoque(fimDeEstoque);
+          return contador;
+        },
+        {}
+      );
+
+      setDiversidadeEstoque(qtdItens);
+      setItensRecentes(produtosRecentes);
+      setFimDeEstoque(fimDeEstoque);
+    } else {
+      localStorage.setItem("produtos", JSON.stringify(produtos));
+    }
   }, []);
 
   return (

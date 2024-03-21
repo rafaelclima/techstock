@@ -1,15 +1,31 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import produtos from "../../database.json";
 import { Link } from "react-router-dom";
 import { Undo2 } from "lucide-react";
+
+interface Produto {
+  id: number;
+  nome: string;
+  quantidade_em_estoque: number;
+  categoria: string;
+  data_de_inclusao: string;
+  data_de_atualizacao?: string;
+  preco: number;
+  img: string;
+  descricao: string;
+}
 
 export default function Detalhes() {
   const [isAllProductsActive, setAllProductsActive] = useState(true);
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const produto = id ? produtos.filter((produto) => produto.id === +id) : [];
+  const produtosSalvos: string = localStorage.getItem("produtos") ?? "";
+  const produtosJson: Produto[] = JSON.parse(produtosSalvos);
+
+  const produto = id
+    ? produtosJson.filter((produto: { id: number }) => produto.id === +id)
+    : [];
 
   const handleButtonClick = () => {
     setAllProductsActive(!isAllProductsActive);
@@ -75,6 +91,11 @@ export default function Detalhes() {
               <p className=" text-xl">
                 Cadastrado em: {formatData(item.data_de_inclusao)}
               </p>
+              {item.data_de_atualizacao && item.data_de_atualizacao ? (
+                <p className=" text-xl mt-2 ">
+                  Atualizado em: {formatData(item.data_de_atualizacao)}
+                </p>
+              ) : null}
 
               <div className="flex gap-4 mt-8">
                 <button
