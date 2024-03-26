@@ -33,8 +33,11 @@ export default function Cadastrar() {
   function handleCadastrarProduto() {
     const dataDeHoje = new Date();
 
+    const ultimoItemDaLista = produtosJson.slice(-1)[0];
+    console.log(ultimoItemDaLista?.id);
+
     const novoProduto = {
-      id: produtosJson.length + 1,
+      id: ultimoItemDaLista ? ultimoItemDaLista.id + 1 : 0o0,
       nome: nomeProduto,
       quantidade_em_estoque: qtdProduto,
       categoria: categoriaProduto,

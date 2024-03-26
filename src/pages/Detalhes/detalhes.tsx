@@ -44,6 +44,21 @@ export default function Detalhes() {
     return dataFormatada;
   }
 
+  function handleDeleteClick() {
+    if (id !== undefined) {
+      const excluirItem = produtosJson.findIndex((item) => item.id === +id);
+
+      if (excluirItem !== -1) {
+        produtosJson.splice(excluirItem, 1);
+        localStorage.setItem("produtos", JSON.stringify(produtosJson));
+        alert("Item excluído com sucesso!");
+        goBack();
+      } else {
+        alert("Error! Item não foi encontrado!");
+      }
+    }
+  }
+
   return (
     <div className=" w-full m-auto ">
       <div className="mx-8 mb-8">
@@ -102,11 +117,12 @@ export default function Detalhes() {
                   type="button"
                   className="bg-transparent hover:bg-purple-500 text-purple-700 font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded"
                 >
-                  Atualizar
+                  <Link to={`/produtos/atualizar/${item.id}`}>Atualizar</Link>
                 </button>
                 <button
                   type="button"
                   className="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
+                  onClick={handleDeleteClick}
                 >
                   Excluir
                 </button>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 interface Produto {
@@ -15,13 +15,30 @@ interface Produto {
 
 export default function Produtos() {
   const [isAllProductsActive, setAllProductsActive] = useState(true);
+  const [estoque, setEstoque] = useState<Produto[]>([]);
 
-  const produtosSalvos: string = localStorage.getItem("produtos") ?? "";
-  const produtosJson: Produto[] = JSON.parse(produtosSalvos);
+  useEffect(() => {
+    const produtosSalvos: string = localStorage.getItem("produtos") ?? "";
+    const produtosJson: Produto[] = JSON.parse(produtosSalvos);
+
+    setEstoque(produtosJson);
+  }, []);
 
   const handleButtonClick = () => {
     setAllProductsActive(!isAllProductsActive);
   };
+
+  function handleDeleteClick(id: number) {
+    const novoEstoque = estoque.filter((item) => item.id !== id);
+
+    if (novoEstoque.length !== estoque.length) {
+      setEstoque(novoEstoque);
+      localStorage.setItem("produtos", JSON.stringify(novoEstoque));
+      alert("Item excluído com sucesso!");
+    } else {
+      alert("Error! Item não foi encontrado!");
+    }
+  }
 
   return (
     <div className=" w-full m-auto ">
@@ -91,7 +108,7 @@ export default function Produtos() {
                     </tr>
                   </thead>
                   <tbody>
-                    {produtosJson.map((produto) => (
+                    {estoque.map((produto) => (
                       <tr
                         key={produto.id}
                         className="hover:bg-gray-100 dark:hover:bg-zinc-900"
@@ -134,6 +151,7 @@ export default function Produtos() {
                           <button
                             type="button"
                             className="bg-transparent hover:bg-purple-500 text-purple-700 font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded"
+                            onClick={() => handleDeleteClick(produto.id)}
                           >
                             Excluir
                           </button>

@@ -67,6 +67,11 @@ export default function Atualizar() {
       img: "www.imgprod.com.br",
       descricao: descricaoProduto,
     };
+
+    {
+      /* Criar uma lógica melhor para que não haja conflito de IDs. */
+    }
+
     produtosJson[produto[0].id - 1] = novoProduto;
     localStorage.setItem("produtos", JSON.stringify(produtosJson));
     alert("Produto Atualizado com sucesso!");
@@ -98,11 +103,8 @@ export default function Atualizar() {
       <main className=" mx-8 ">
         {produto &&
           produto.map((prod) => (
-            <>
-              <div
-                key={prod.id}
-                className=" grid grid-cols-2 gap-4 w-1/2 m-auto place-items-center "
-              >
+            <div key={prod.id}>
+              <div className=" grid grid-cols-2 gap-4 w-1/2 m-auto place-items-center ">
                 <div className=" flex flex-col items-start gap-1 w-full ">
                   <label htmlFor="name">Nome</label>
                   <input
@@ -177,7 +179,7 @@ export default function Atualizar() {
                   {id ? "Atualizar" : "Salvar"}
                 </button>
               </div>
-            </>
+            </div>
           ))}
       </main>
     </div>
