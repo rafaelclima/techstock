@@ -56,7 +56,7 @@ Acesse o aplicativo no seu navegador usando o seguinte endereço:
 
 ![App Screenshot](https://lh3.googleusercontent.com/d/1qS3XYbZIx43J84R7xCRZ82Y9iG7cIS_f)
 
-![App Screenshot](https://lh3.googleusercontent.com/d/1jEZ-q0TjX8s0LHUXUc8Yi9RX9fOhlayp)
+![App Screenshot](https://lh3.googleusercontent.com/d/1ZpfbmjuLmaRzYLsh8LV7-XnNm7zELJ3U)
 
 ![App Screenshot](https://lh3.googleusercontent.com/d/1IvQYl46dsTflKg9_H2CYmew6qpPmvICq)
 
