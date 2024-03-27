@@ -54,11 +54,11 @@ Acesse o aplicativo no seu navegador usando o seguinte endereço:
 
 ## Screenshots
 
-![App Screenshot](https://lh3.googleusercontent.com/d/1jLU2rrndYGAxjwIDCoHh1hdcLAO5iwbC)
+![App Screenshot](https://lh3.googleusercontent.com/d/1qS3XYbZIx43J84R7xCRZ82Y9iG7cIS_f)
 
-![App Screenshot](https://lh3.googleusercontent.com/d/1f-Vphsqr2oIlq2M2ouijnfa4Tn818FG0)
+![App Screenshot](https://lh3.googleusercontent.com/d/1jEZ-q0TjX8s0LHUXUc8Yi9RX9fOhlayp)
 
-![App Screenshot](https://lh3.googleusercontent.com/d/1iFPouaIb5yi8zEKk4ZXIWkeu7nqpJb2E)
+![App Screenshot](https://lh3.googleusercontent.com/d/1IvQYl46dsTflKg9_H2CYmew6qpPmvICq)
 
 ## Autor
 
