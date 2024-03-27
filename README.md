@@ -52,6 +52,14 @@ Acesse o aplicativo no seu navegador usando o seguinte endereço:
 - CSS
 - Tailwind
 
+## Screenshots
+
+![App Screenshot](https://lh3.googleusercontent.com/d/1jLU2rrndYGAxjwIDCoHh1hdcLAO5iwbC)
+
+![App Screenshot](https://lh3.googleusercontent.com/d/1f-Vphsqr2oIlq2M2ouijnfa4Tn818FG0)
+
+![App Screenshot](https://lh3.googleusercontent.com/d/1iFPouaIb5yi8zEKk4ZXIWkeu7nqpJb2E)
+
 ## Autor
 
 - [@rafaelclima](https://www.github.com/rafaelclima)
