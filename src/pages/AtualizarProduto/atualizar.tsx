@@ -1,4 +1,5 @@
 import { SaveIcon } from "lucide-react";
+import moment from "moment";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
@@ -54,7 +55,8 @@ export default function Atualizar() {
   };
 
   function handleUpdateProdutos() {
-    const dataDeHoje = new Date();
+    const dataDeHoje = moment();
+    const dataFormatada = dataDeHoje.format("YYYY-MM-DD");
 
     const novoProduto = {
       id: produto[0].id,
@@ -62,19 +64,23 @@ export default function Atualizar() {
       quantidade_em_estoque: qtdProduto,
       categoria: categoriaProduto,
       data_de_inclusao: produto[0].data_de_inclusao,
-      data_de_atualizacao: dataDeHoje.toISOString().slice(0, 10),
+      data_de_atualizacao: dataFormatada,
       preco: precoProduto,
       img: "www.imgprod.com.br",
       descricao: descricaoProduto,
     };
 
-    {
-      /* Criar uma lógica melhor para que não haja conflito de IDs. */
-    }
+    if (id !== undefined) {
+      const atualizarItem = produtosJson.findIndex((item) => item.id === +id);
 
-    produtosJson[produto[0].id - 1] = novoProduto;
-    localStorage.setItem("produtos", JSON.stringify(produtosJson));
-    alert("Produto Atualizado com sucesso!");
+      if (atualizarItem !== -1) {
+        produtosJson.splice(atualizarItem, 1, novoProduto);
+        localStorage.setItem("produtos", JSON.stringify(produtosJson));
+        alert("Produto Atualizado com sucesso!");
+      } else {
+        alert("Produto não encontrado!");
+      }
+    }
   }
 
   return (
