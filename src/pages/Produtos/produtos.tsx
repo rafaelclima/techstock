@@ -1,3 +1,4 @@
+import { MoveDown, MoveUp } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -16,12 +17,18 @@ interface Produto {
 export default function Produtos() {
   const [isAllProductsActive, setAllProductsActive] = useState(true);
   const [estoque, setEstoque] = useState<Produto[]>([]);
+  const [sortName, setSortName] = useState(true);
+  const [sortQtd, setSortQtd] = useState(true);
+  const [sortCategory, setSortCategory] = useState(true);
 
   useEffect(() => {
     const produtosSalvos: string = localStorage.getItem("produtos") ?? "";
     const produtosJson: Produto[] = JSON.parse(produtosSalvos);
 
-    setEstoque(produtosJson);
+    const orderedByName = produtosJson.sort((a, b) =>
+      a.nome.localeCompare(b.nome)
+    );
+    setEstoque(orderedByName);
   }, []);
 
   const handleButtonClick = () => {
@@ -37,6 +44,54 @@ export default function Produtos() {
       alert("Item excluído com sucesso!");
     } else {
       alert("Error! Item não foi encontrado!");
+    }
+  }
+
+  function handleSortByName() {
+    if (sortName) {
+      const orderedByName = estoque.sort((a, b) =>
+        b.nome.localeCompare(a.nome)
+      );
+      setEstoque(orderedByName);
+      setSortName(!sortName);
+    } else {
+      const orderedByName = estoque.sort((a, b) =>
+        a.nome.localeCompare(b.nome)
+      );
+      setEstoque(orderedByName);
+      setSortName(!sortName);
+    }
+  }
+
+  function handleSortByQtdEstoque() {
+    if (sortQtd) {
+      const orderedByQtdEstoque = estoque.sort(
+        (a, b) => b.quantidade_em_estoque - a.quantidade_em_estoque
+      );
+      setEstoque(orderedByQtdEstoque);
+      setSortQtd(!sortQtd);
+    } else {
+      const orderedByQtdEstoque = estoque.sort(
+        (a, b) => a.quantidade_em_estoque - b.quantidade_em_estoque
+      );
+      setEstoque(orderedByQtdEstoque);
+      setSortQtd(!sortQtd);
+    }
+  }
+
+  function handleSortByCategory() {
+    if (sortCategory) {
+      const orderedByCategory = estoque.sort((a, b) =>
+        b.categoria.localeCompare(a.categoria)
+      );
+      setEstoque(orderedByCategory);
+      setSortCategory(!sortCategory);
+    } else {
+      const orderedByCategory = estoque.sort((a, b) =>
+        a.categoria.localeCompare(b.categoria)
+      );
+      setEstoque(orderedByCategory);
+      setSortCategory(!sortCategory);
     }
   }
 
@@ -85,19 +140,73 @@ export default function Produtos() {
                         scope="col"
                         className=" top-0 sticky px-6 py-4 text-start text-xs font-medium bg-zinc-800 uppercase"
                       >
-                        Nome
+                        <div
+                          className=" flex items-center cursor-pointer "
+                          onClick={handleSortByName}
+                        >
+                          Nome
+                          {sortName ? (
+                            <MoveDown
+                              size={14}
+                              strokeWidth={1.75}
+                              className=" text-purple-400 "
+                            />
+                          ) : (
+                            <MoveUp
+                              size={14}
+                              strokeWidth={1.75}
+                              className=" text-purple-400 "
+                            />
+                          )}
+                        </div>
                       </th>
                       <th
                         scope="col"
                         className=" top-0 sticky px-6 py-4 text-xs text-start font-medium bg-zinc-800 uppercase"
                       >
-                        Em Estoque
+                        <div
+                          className=" flex items-center cursor-pointer "
+                          onClick={handleSortByQtdEstoque}
+                        >
+                          Em Estoque
+                          {sortQtd ? (
+                            <MoveDown
+                              size={14}
+                              strokeWidth={1.75}
+                              className=" text-purple-400 "
+                            />
+                          ) : (
+                            <MoveUp
+                              size={14}
+                              strokeWidth={1.75}
+                              className=" text-purple-400 "
+                            />
+                          )}
+                        </div>
                       </th>
                       <th
                         scope="col"
                         className=" top-0 sticky px-6 py-4 text-xs text-start font-medium bg-zinc-800 uppercase"
                       >
-                        Categoria
+                        <div
+                          className=" flex items-center cursor-pointer "
+                          onClick={handleSortByCategory}
+                        >
+                          Categoria
+                          {sortCategory ? (
+                            <MoveDown
+                              size={14}
+                              strokeWidth={1.75}
+                              className=" text-purple-400 "
+                            />
+                          ) : (
+                            <MoveUp
+                              size={14}
+                              strokeWidth={1.75}
+                              className=" text-purple-400 "
+                            />
+                          )}
+                        </div>
                       </th>
                       <th
                         scope="col"
