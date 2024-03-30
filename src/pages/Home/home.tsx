@@ -73,7 +73,7 @@ function Home() {
       <h1 className=" text-4xl mb-8 ml-8 ">Dashboard</h1>
       <div className=" mx-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
         <div className=" h-48 flex flex-col items-center p-4 gap-4 rounded bg-zinc-800 ">
-          <h3 className=" text-xl ">Diversidade de Itens</h3>
+          <h3 className=" text-xl ">Categorias</h3>
           <div className=" w-28 h-28 flex items-center justify-center bg-purple-700 rounded-full ">
             <span className=" text-center text-2xl ">{diversidadeEstoque}</span>
           </div>
@@ -131,10 +131,10 @@ function Home() {
                           key={produto.id}
                           className="hover:bg-gray-100 dark:hover:bg-zinc-900"
                         >
-                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">
+                          <td className="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">
                             {produto.nome}
                           </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
+                          <td className="px-4 py-2 whitespace-nowrap text-center text-sm font-medium">
                             <button
                               type="button"
                               className="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-purple-500 hover:text-purple-400 disabled:opacity-50 disabled:pointer-events-none dark:text-purple-500 dark:focus:outline-none"
@@ -185,13 +185,13 @@ function Home() {
                           key={produto.id}
                           className="hover:bg-gray-100 dark:hover:bg-zinc-900"
                         >
-                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">
+                          <td className="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">
                             {produto.nome}
                           </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-center font-medium text-gray-800 dark:text-gray-200">
+                          <td className="px-4 py-2 whitespace-nowrap text-sm text-center font-medium text-gray-800 dark:text-gray-200">
                             {produto.quantidade_em_estoque}
                           </td>
-                          <td className="px-6 py-4 whitespace-nowrap text-center text-sm font-medium">
+                          <td className="px-4 py-2 whitespace-nowrap text-center text-sm font-medium">
                             <button
                               type="button"
                               className="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-purple-500 hover:text-purple-400 disabled:opacity-50 disabled:pointer-events-none dark:text-purple-500 dark:focus:outline-none"

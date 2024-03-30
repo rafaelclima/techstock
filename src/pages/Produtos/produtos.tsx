@@ -98,7 +98,7 @@ export default function Produtos() {
   return (
     <div className=" w-full m-auto ">
       <h2 className=" text-4xl mb-8 mx-8 ">Produtos em estoque</h2>
-      <div className="mx-8 mb-8">
+      <div className="mx-8 mb-4">
         <button
           className={`mr-8 hover:text-purple-500 focus:outline-none ${
             isAllProductsActive ? "text-purple-500" : ""
@@ -132,13 +132,13 @@ export default function Produtos() {
                     <tr>
                       <th
                         scope="col"
-                        className=" top-0 sticky px-6 py-4 text-start text-xs font-medium bg-zinc-800 uppercase"
+                        className=" top-0 sticky px-4 py-3 text-start text-xs font-medium bg-zinc-800 uppercase"
                       >
                         ID
                       </th>
                       <th
                         scope="col"
-                        className=" top-0 sticky px-6 py-4 text-start text-xs font-medium bg-zinc-800 uppercase"
+                        className=" top-0 sticky px-4 py-3 text-start text-xs font-medium bg-zinc-800 uppercase"
                       >
                         <div
                           className=" flex items-center cursor-pointer "
@@ -162,7 +162,7 @@ export default function Produtos() {
                       </th>
                       <th
                         scope="col"
-                        className=" top-0 sticky px-6 py-4 text-xs text-start font-medium bg-zinc-800 uppercase"
+                        className=" top-0 sticky px-4 py-3 text-xs text-start font-medium bg-zinc-800 uppercase"
                       >
                         <div
                           className=" flex items-center cursor-pointer "
@@ -186,7 +186,7 @@ export default function Produtos() {
                       </th>
                       <th
                         scope="col"
-                        className=" top-0 sticky px-6 py-4 text-xs text-start font-medium bg-zinc-800 uppercase"
+                        className=" top-0 sticky px-4 py-3 text-xs text-start font-medium bg-zinc-800 uppercase"
                       >
                         <div
                           className=" flex items-center cursor-pointer "
@@ -210,7 +210,7 @@ export default function Produtos() {
                       </th>
                       <th
                         scope="col"
-                        className=" top-0 sticky px-6 py-4 text-xs text-start font-medium bg-zinc-800 uppercase"
+                        className=" top-0 sticky px-4 py-3 text-xs text-start font-medium bg-zinc-800 uppercase"
                       >
                         Ações
                       </th>
@@ -222,19 +222,19 @@ export default function Produtos() {
                         key={produto.id}
                         className="hover:bg-gray-100 dark:hover:bg-zinc-900"
                       >
-                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">
+                        <td className="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200">
                           {produto.id}
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-start font-medium text-gray-800 dark:text-gray-200">
+                        <td className="px-4 py-2 whitespace-nowrap text-sm text-start font-medium text-gray-800 dark:text-gray-200">
                           {produto.nome}
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-start font-medium text-gray-800 dark:text-gray-200">
+                        <td className="px-4 py-2 whitespace-nowrap text-sm text-start font-medium text-gray-800 dark:text-gray-200">
                           {produto.quantidade_em_estoque}
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-start font-medium text-gray-800 dark:text-gray-200">
+                        <td className="px-4 py-2 whitespace-nowrap text-sm text-start font-medium text-gray-800 dark:text-gray-200">
                           {produto.categoria}
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-start text-sm font-medium">
+                        <td className="px-4 py-2 whitespace-nowrap text-start text-sm font-medium">
                           <button
                             type="button"
                             className="bg-transparent hover:bg-purple-500 text-purple-700 font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded"
