@@ -22,6 +22,7 @@ export default function Cadastrar() {
   const [precoProduto, setPrecoProduto] = useState<number>(0);
   const [categoriaProduto, setCategoriaProduto] = useState("");
   const [descricaoProduto, setDescricaoProduto] = useState("");
+  const [novaCategoriaProduto, setNovaCategoriaProduto] = useState("");
 
   const produtosSalvos: string = localStorage.getItem("produtos") ?? "";
   const produtosJson: Produtos[] = JSON.parse(produtosSalvos);
@@ -34,13 +35,13 @@ export default function Cadastrar() {
     const dataDeHoje = new Date();
 
     const ultimoItemDaLista = produtosJson.slice(-1)[0];
-    console.log(ultimoItemDaLista?.id);
 
     const novoProduto = {
-      id: ultimoItemDaLista ? ultimoItemDaLista.id + 1 : 0o0,
+      id: ultimoItemDaLista ? ultimoItemDaLista.id + 1 : 0,
       nome: nomeProduto,
       quantidade_em_estoque: qtdProduto,
-      categoria: categoriaProduto,
+      categoria:
+        novaCategoriaProduto !== "" ? novaCategoriaProduto : categoriaProduto,
       data_de_inclusao: dataDeHoje.toISOString().slice(0, 10),
       preco: precoProduto,
       img: "www.imgprod.com.br",
@@ -55,12 +56,13 @@ export default function Cadastrar() {
     setPrecoProduto(0);
     setCategoriaProduto("");
     setDescricaoProduto("");
+    setNovaCategoriaProduto("");
   }
 
   const category = produtosJson.reduce(
-    (contador: CategoriaContador, categoria: Produtos) => {
-      if (!contador.includes(categoria.categoria)) {
-        contador.push(categoria.categoria);
+    (contador: CategoriaContador, produto: Produtos) => {
+      if (!contador.includes(produto.categoria)) {
+        contador.push(produto.categoria);
       }
       return contador;
     },
@@ -126,24 +128,44 @@ export default function Cadastrar() {
             />
           </div>
           <div className=" flex flex-col items-start gap-1 w-full ">
-            <label htmlFor="categoria">Categoria</label>
-            <select
-              className=" px-2 py-4 w-full rounded text-base text-white bg-zinc-800 "
-              name="categoria"
-              id="categoria"
-              value={categoriaProduto}
-              onChange={(ev) => setCategoriaProduto(ev.target.value)}
-            >
-              <option disabled value="">
-                Selecione uma categoria
-              </option>
-              {category &&
-                category.map((prod) => (
-                  <option key={prod} value={prod}>
-                    {prod}
+            {categoriaProduto === "novaCategoria" ||
+            novaCategoriaProduto !== "" ? (
+              <div className=" flex flex-col items-start gap-1 w-full ">
+                <label htmlFor="novaCategoriaInput">Nova Categoria:</label>
+                <input
+                  type="text"
+                  id="novaCategoriaInput"
+                  placeholder="Digite a nova categoria"
+                  value={novaCategoriaProduto}
+                  className=" px-2 py-4 mt-1 w-full rounded text-base text-white bg-zinc-800 "
+                  onChange={(ev) => setNovaCategoriaProduto(ev.target.value)}
+                />
+              </div>
+            ) : (
+              <div className=" flex flex-col items-start gap-1 w-full ">
+                <label htmlFor="categoria">Categoria</label>
+                <select
+                  className=" px-2 py-4 w-full rounded block text-base text-white bg-zinc-800 "
+                  name="categoria"
+                  id="categoria"
+                  value={categoriaProduto}
+                  onChange={(ev) => setCategoriaProduto(ev.target.value)}
+                >
+                  <option disabled value="">
+                    Selecione uma categoria
                   </option>
-                ))}
-            </select>
+                  {category &&
+                    category.map((prod) => (
+                      <option key={prod} value={prod}>
+                        {prod}
+                      </option>
+                    ))}
+                  <option value="novaCategoria">
+                    Adicionar nova categoria
+                  </option>
+                </select>
+              </div>
+            )}
           </div>
 
           <div className=" col-span-2 w-full m-auto place-items-center ">
