@@ -1,73 +1,93 @@
-# TechStock - Gestor de Estoque
+# 🚀 TechStock - Gestor de Estoque Inteligente
 
-## Apêndice
+![TechStock Banner](https://picsum.photos/1200/600?grayscale&blur=2)
 
-TechStock é uma aplicação de gerenciamento de estoque para lojas de tecnologia. Permite aos usuários visualizar, adicionar, atualizar e excluir produtos, bem como monitorar o estoque e suas categorias.
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](https://choosealicense.com/licenses/mit/)
 
-## Funcionalidades
+TechStock é uma aplicação moderna de gerenciamento de estoque desenvolvida para lojas de tecnologia, oferecendo controle completo sobre produtos, categorias e níveis de estoque.
 
-- Visualização de produtos por categoria.
-- Adição, atualização e exclusão de produtos.
-- Monitoramento do estoque disponível de cada produto.
-- Fácil navegação e interface intuitiva.
+## ✨ Funcionalidades Principais
 
-## Instalação
+- 📋 **CRUD Completo** - Adicione, visualize, atualize e remova produtos com facilidade
+- 🗂 **Organização por Categorias** - Filtre produtos por diferentes categorias
+- 📊 **Monitoramento de Estoque** - Acompanhe quantidades disponíveis em tempo real
+- 🎨 **Interface Intuitiva** - Design limpo e responsivo com Tailwind CSS
+- ⚡ **Performance Otimizada** - Desenvolvido com React para máxima eficiência
 
-Clone este repositório para o seu ambiente local usando o seguinte comando:
+## 📦 Instalação
 
+1. Clone o repositório:
 ```bash
-  git clone https://github.com/rafaelclima/techstock.git
-
+git clone https://github.com/rafaelclima/techstock.git
 ```
 
-Navegue até o diretório do projeto:
-
+2. Acesse a pasta do projeto:
 ```bash
-  cd techstock
+cd techstock
 ```
 
-Instale as dependências usando npm ou yarn:
-
+3. Instale as dependências:
 ```bash
-  npm install // yarn install
+npm install
+# ou
+yarn install
 ```
 
-Inicie o servidor de desenvolvimento:
-
+4. Inicie o servidor de desenvolvimento:
 ```bash
-  npm start // yarn start
+npm start
+# ou
+yarn start
 ```
 
-Acesse o aplicativo no seu navegador usando o seguinte endereço:
-
+5. Acesse no navegador:
 ```bash
-  http://localhost:3000
+http://localhost:3000
 ```
 
-## Stack utilizada
+## 🖼 Screenshots
 
-- React
-- JavaScript
-- HTML
-- CSS
-- Tailwind
+| Dashboard | Gerenciamento de Produtos | Controle de Estoque |
+|-----------|--------------------------|---------------------|
+| ![Dashboard](https://lh3.googleusercontent.com/d/1qS3XYbZIx43J84R7xCRZ82Y9iG7cIS_f) | ![Produtos](https://lh3.googleusercontent.com/d/1ZpfbmjuLmaRzYLsh8LV7-XnNm7zELJ3U) | ![Estoque](https://lh3.googleusercontent.com/d/1IvQYl46dsTflKg9_H2CYmew6qpPmvICq) |
 
-## Screenshots
+## 🛠 Stack Tecnológica
 
-![App Screenshot](https://lh3.googleusercontent.com/d/1qS3XYbZIx43J84R7xCRZ82Y9iG7cIS_f)
+- **Frontend**: 
+  - React.js
+  - JavaScript (ES6+)
+  - Tailwind CSS
+  - HTML5 semântico
 
-![App Screenshot](https://lh3.googleusercontent.com/d/1ZpfbmjuLmaRzYLsh8LV7-XnNm7zELJ3U)
+- **Ferramentas**:
+  - Vite (opcional - se utilizado)
+  - ESLint + Prettier
+  - Git/GitHub
 
-![App Screenshot](https://lh3.googleusercontent.com/d/1IvQYl46dsTflKg9_H2CYmew6qpPmvICq)
+## 🤝 Como Contribuir
 
-## Autor
+Contribuições são sempre bem-vindas! Siga estes passos:
 
-- [@rafaelclima](https://www.github.com/rafaelclima)
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
 
-## Suporte
+## 📄 Licença
 
-Contribuições são bem-vindas! Se você encontrar um bug ou tiver uma ideia para uma nova funcionalidade, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## Licença
+## ✉️ Contato
 
-[MIT](https://choosealicense.com/licenses/mit/)
+Rafael Lima - [@rafaelclima](https://github.com/rafaelclima)
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rafaelclima)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/seu-linkedin)
+
+---
+
+Feito com ❤️ e React.js por [Rafael Lima](https://github.com/rafaelclima)
