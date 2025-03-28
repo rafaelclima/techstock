@@ -2,9 +2,11 @@
 
 ![TechStock Banner](https://camo.githubusercontent.com/8da712d4d2244231ed9067059c6f0b896ed3a70f0b45c4e7b0a2010150c52a4c/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f642f317153335859625a497834334a383452377843525a383259396947376349535f66)
 
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+<div data-badges>
+  [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+  [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+<div/>
 
 TechStock é uma aplicação moderna de gerenciamento de estoque desenvolvida para lojas de tecnologia, oferecendo controle completo sobre produtos, categorias e níveis de estoque.
 
